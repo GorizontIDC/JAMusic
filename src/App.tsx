@@ -1,13 +1,13 @@
-import React from 'react'
-import HomePage from '../pages/mainPage.tsx'
-import './App.css'
-
+//import React from 'react'
+import MainPage from "./pages/MainPage";
+import Header from "./components/Header.tsx";
 function App() {
   return (
     <div>
-      <HomePage />
+      <MainPage />
+      <Header title={"ШАПКА"} />
     </div>
-  )
+  );
 }
 
 export default App;

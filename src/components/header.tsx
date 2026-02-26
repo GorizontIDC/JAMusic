@@ -1,5 +1,5 @@
-import React from "react"
-import './index.css'
+//import React from "react"
+
 interface HeaderProps {
     title: string;
     showSearch?: boolean;
@@ -20,4 +20,4 @@ function Header({ title, showSearch}:HeaderProps) {
         </header>
     )
 }
-export default Header
+export default Header;
