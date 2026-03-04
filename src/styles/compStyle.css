@@ -1,0 +1,18 @@
+*{
+    font-family: "Pangolin";
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #0E1113;
+}
+.logo-images{
+    width: 160px;
+    height: 80px;
+    margin-left: 1rem;
+}
+.userProfile{
+    margin-right: 1.5rem;
+}
