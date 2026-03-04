@@ -9,7 +9,7 @@ function Header({showSearch}:HeaderProps) {
     return (
         <header className="header">
             <>
-                <a href="https://vk.com" className="logo-link">
+                <a href="/" className="logo-link">
                     <img src="/images/logo2.png"
                         alt="JAMusic"
                         className="logo-images"

@@ -16,3 +16,14 @@ header{
 .userProfile{
     margin-right: 1.5rem;
 }
+.textFooter{
+        color: #fff;
+}
+footer{
+    height: 120px;
+    background-color: #0E1113;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
