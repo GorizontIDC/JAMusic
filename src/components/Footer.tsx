@@ -3,7 +3,7 @@ import "../styles/compStyle.css";
 function Footer()
 {
     return (
-        <footer className="footer h-120px"> 
+        <footer className="footer"> 
             <>
                 <p className="textFooter">
                     © JAMusic 2026. Все права защищены. <br></br>

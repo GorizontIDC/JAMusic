@@ -1,6 +1,7 @@
 import { useState } from "react";
 import  "../styles/compStyle.css";
 import { PersonCircle } from 'react-bootstrap-icons';
+import logo from '../assets/images/logo2.png';
 interface HeaderProps {
     showSearch?: boolean;
 }
@@ -10,14 +11,14 @@ function Header({showSearch}:HeaderProps) {
         <header className="header">
             <>
                 <a href="/" className="logo-link">
-                    <img src="/JAMisic/images/logo2.png"
+                    <img src={logo}
                         alt="JAMusic"
                         className="logo-images"
                     />
                 </a>
             </>
             {showSearch && (
-            <div id="search" className="search w-500px d-flex align-items-center justify-content-center"> 
+            <div id="search" className="search w-500px d-flex align-items-center"> 
                 <input type="search"
                        className="form-control me-1 w-600px"
                        placeholder="Поиск..."
