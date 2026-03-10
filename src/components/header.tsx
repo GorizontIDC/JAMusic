@@ -10,7 +10,7 @@ function Header({showSearch}:HeaderProps) {
         <header className="header">
             <>
                 <a href="/" className="logo-link">
-                    <img src="/images/logo2.png"
+                    <img src="/JAMisic/images/logo2.png"
                         alt="JAMusic"
                         className="logo-images"
                     />
