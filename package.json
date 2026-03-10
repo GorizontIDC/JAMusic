@@ -1,16 +1,16 @@
 {
-  "name": "JAMusic",
-  "homepage": "https://gorizontidc.github.io/JAMusic/",
+  "name": "jamusic",
+  "homepage": "https://GorizontIDC.github.io/JAMusic",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d main"
+    "preview": "vite preview"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
