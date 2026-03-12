@@ -11,20 +11,49 @@ header{
 .logo-images{
     width: 160px;
     height: 80px;
-    margin-left: 1rem;
+    margin-left: 30px;
 }
 .userProfile{
     margin-right: 1.5rem;
 }
 .textFooter{
-        color: #fff;
+    color: #ffffff;
+    margin-bottom: 0% !important;
 }
 footer{
     height: 100px;
     background-color: #0E1113;
-    padding-top: 1rem;
-    padding-left: 1rem;
+    padding-left: 30px;
+    padding-right: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.btn-primary{
+    background-color: #0E1113 !important;
+    color: #ffffff !important;
+    border-color: #FF0000 !important;
+    border-width: 6px !important;
+}
+#ftbtn{ 
+    margin-right: 1.5rem !important;
+}
+.form-control{
+    border-color:#FF0000 !important;
+    border-width: 3px !important;
+    width: 300px !important;
+}
+.profile-button{
+    border-color:#FF0000 !important;
+    border-width: 2px !important;
+    border-radius: 50% !important;
+    width: 60px;
+    height: 60px;
+}
+.social-link{
+    color: #FF0000 !important;
+}
+.social-links{
+    display: flex;
+    gap: 0.5rem;
 }
