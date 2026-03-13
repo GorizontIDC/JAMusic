@@ -1,7 +1,9 @@
 import {Carousel} from 'react-bootstrap';
 import '../styles/compStyle.css';
-import slide1 from '../assets/images/qwe.png';
-import slide2 from '../assets/images/asd.png';
+import '../styles/App.css';
+import slide1 from '../assets/images/jpg.jpg';
+import slide2 from '../assets/images/asd.jpg';
+import slide3 from "../assets/images/zxc.jpg";
 interface Slide {
   id: number;
   image: string;
@@ -13,14 +15,20 @@ function ImgCarousel(){
         {
             id:1,
             image: slide1,
-            title: 'test first slide',
-            description: 'Новые исполнители лета!'
+            title: 'Согрели этой зимой.',
+            description: 'Новые исполнители начала года.'
         },
         {
             id:2,
             image: slide2,
-            title: 'test second slide',
-            description: 'Качёвые альбомы.'
+            title: 'Концептуально, современно, лирично.',
+            description: 'Кто удивил новыми альбомами?.'
+        },
+        {
+            id:3,
+            image: slide3,
+            title: 'Будь с нами, ведь:',
+            description: 'Тебе по вкусу!'
         }
        ]
     return(

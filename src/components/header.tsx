@@ -23,7 +23,7 @@ function Header({showSearch}:HeaderProps) {
                        className="form-control me-1 w-600px"
                        placeholder="Поиск..."
                 />
-                <button className="btn btn-primary w-15px h-8px">Найти</button>
+                <button id="searchButton" className="btn btn-primary w-15px h-8px">Найти</button>
             </div>
         )}
             <div className="userProfile">
