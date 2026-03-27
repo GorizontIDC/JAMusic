@@ -22,12 +22,12 @@ function ImgCarousel(){
             id:2,
             image: slide2,
             title: 'Концептуально, современно, лирично.',
-            description: 'Кто удивил новыми альбомами?.'
+            description: 'Кто удивил новыми альбомами?'
         },
         {
             id:3,
             image: slide3,
-            title: 'Будь с нами, ведь:',
+            title: 'Будь с нами,',
             description: 'Тебе по вкусу!'
         }
        ]
@@ -39,10 +39,10 @@ function ImgCarousel(){
                 <img className="d-block w-100"
                 src={slide.image}
                 alt={slide.title}
-                style={{height: '400px', objectFit: 'cover'}}/>
+                style={{height: '495px', objectFit: 'cover'}}/>
                 <Carousel.Caption>
-                    <h3>{slide.title}</h3>
-                    <p>{slide.description}</p>
+                    <h3 className='carousel-title'>{slide.title}</h3>
+                    <p className='carousel-description'>{slide.description}</p>
                 </Carousel.Caption>
             </Carousel.Item>
         ))}

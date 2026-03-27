@@ -27,10 +27,8 @@ function Header({showSearch}:HeaderProps) {
             </div>
         )}
             <div className="userProfile">
-                <button className="profile-button"
-                onClick={() => setMenuOpen(!menuOpen)}
-                >
-                <PersonCircle size={40}/>
+                <button className="profile-button" onClick={() => setMenuOpen(!menuOpen)}>
+                    <PersonCircle size={40}/>
                 </button>
                 {menuOpen && (
                     <div className="profileSection">

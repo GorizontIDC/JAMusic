@@ -1,65 +1,180 @@
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px;
-    background-color: #0E1113;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #0e1113;
 }
-.logo-images{
-    width: 160px;
-    height: 80px;
-    margin-left: 30px;
+.logo-images {
+  width: 160px;
+  height: 80px;
+  margin-left: 30px;
 }
-.userProfile{
-    margin-right: 1.5rem;
+.userProfile {
+  margin-right: 1.5rem;
 }
-.textFooter{
-    color: #ffffff;
-    margin-bottom: 0% !important;
+.textFooter {
+  color: #ffffff;
+  margin-bottom: 0% !important;
 }
-footer{
-    height: 100px;
-    background-color: #0E1113;
-    padding-left: 30px;
-    padding-right: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+footer {
+  height: 100px;
+  background-color: #0e1113;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.btn-primary{
-    background-color: #0E1113 !important;
-    color: #ffffff !important;
-    border-color: #C43F3F !important;
-    border-width: 6px !important;
+.btn-primary {
+  background-color: #0e1113 !important;
+  color: #ffffff !important;
+  border-color: #ca1919 !important;
+  border-width: 6px !important;
 }
-#ftbtn{ 
-    margin-right: 1.5rem !important;
+#ftbtn {
+  margin-right: 1.5rem !important;
 }
-#searchButton{
-    border-color:#FF0000 !important;
-    border-width: 3px !important;
+#searchButton {
+  border-color: #ff0000 !important;
+  border-width: 3px !important;
 }
-.form-control{
-    border-color:#FF0000 !important;
-    border-width: 3px !important;
-    width: 300px !important;
+.form-control {
+  border-color: #ff0000 !important;
+  border-width: 3px !important;
+  width: 300px !important;
 }
-.profile-button{
-    border-color:#FF0000 !important;
-    border-width: 3px !important;
-    border-radius: 50% !important;
-    width: 60px;
-    height: 60px;
+.profile-button {
+  border-color: #ff0000 !important;
+  border-width: 3px !important;
+  border-radius: 50% !important;
+  width: 60px;
+  height: 60px;
 }
-.social-link{
-    color: #C43F3F !important;
+.social-link {
+  color: #ca1919 !important;
 }
-.social-links{
-    display: flex;
-    gap: 0.5rem;
+.social-links {
+  display: flex;
+  gap: 0.5rem;
 }
-.carousel-container{
-    width: 100% !important;
-    margin-top: 1.5rem !important;
-    margin-bottom: 1.5rem !important;
+/*Блок для карусели*/
+.carousel-container {
+  width: 100% !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
 }
+.carousel-description {
+  font-size: 20px;
+}
+/*Блок для карусели*/
+/*Блок для Слушают сейчас и Новые релизы*/
+.scroll-list-title {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 46px;
+}
+.song-wrapper {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  display: flex;
+  gap: 1rem;
+}
+.songUl {
+  display: flex;
+  gap: 0.8rem;
+  list-style: none;
+  width: max-content;
+  margin-right: 33px;
+  margin-top: 5px;
+  padding-bottom: 30px;
+}
+.song-item {
+ flex-shrink: 0;
+ width: 190px;
+ overflow: hidden;
+ box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.35);
+ background-color: #FFFFFF;
+ border-radius: 10% 10% 0% 0%;
+}
+.song-list-controls {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  padding-right: 2rem;
+}
+.scroll-button-left,.scroll-button-right {
+  border-radius: 50%;
+  width: 39px;
+  height: 40px;
+  color: #ca1919;
+  border-color: #ca1919;
+  border-width: 3px;
+}
+.song-wrapper::-webkit-scrollbar {
+  display: none; /*Скрктие скроллера */
+}
+.song-wrapper{
+  scrollbar-width: none;
+}
+.song-cover{
+  width: 100%;
+  height: 190px;
+  border-radius: 10% 10% 0% 0%;
+  overflow: hidden;
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.song-cover img{
+  width: 100%;
+  height: 100%;
+  transition: filter 0.3s, transform 0.3s;
+  margin-bottom: -55px;
+  grid-area: 1/1;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.song-cover:hover img{
+  filter: brightness(0.65);
+  transform: scale(1.05);
+}
+.play-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-30px);
+  width: 55px;
+  height: 55px;
+  grid-area: 1/1;
+  cursor:pointer;
+  z-index: 2;
+  transition: all 0.3s;
+  background: none;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 50%;
+  opacity:0;
+  margin-top:50px;
+}
+.song-cover:hover .play-button{
+  opacity: 1;
+}
+.song-info *{
+  margin-bottom: 0px ;
+  margin-left: 5px;
+}
+.songs-artist-album{
+    font-size: 15px;
+    color: #383838;
+}
+.song-duration{
+  font-size: 20px;
+  color: #383838;
+}
+
+/*Блок для Слушают сейчас */
