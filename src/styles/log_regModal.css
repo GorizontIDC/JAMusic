@@ -1,0 +1,110 @@
+.lr-Window{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.RL-content{
+    display: relative;
+    background-color: white !important;
+    width: 100%;
+    width: 400px;
+    height: 32vh;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.content-inside{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 80%;
+}
+.modal-closed{
+    position: absolute;
+    top: -46px;
+    right: -41px;
+    color: #ffffff !important;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 36px;
+    transition: all 0.5s ease;
+    padding: none !important;
+}
+.modal-closed:hover{
+  transform: rotate(90deg);
+}
+.auth-header{
+    width: 100%;
+    height: auto;
+}
+.registr-form{
+    display: flex;
+}
+.inputs-reg{
+    align-items: center;
+    vertical-align: auto !important;
+}
+.form-submit{
+    border: none;
+    background: none;
+    color: white;
+}
+.form-input{
+    width: 270px !important;
+    height: 40px !important;
+    border-width: 5px;
+    border-radius: 5px;
+    border-color: #FF0000 !important;
+}
+.login-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 21px;
+    background: linear-gradient(215deg, 
+    #F2f2f2 35%,
+    #ef0000 65% );
+
+}
+.registr-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 21px;
+    background: linear-gradient(145deg, 
+    #F2f2f2 35%,
+    #ef0000 65% );
+}
+.form-submit-login{
+    color: #FF0000;
+    border: none;
+    background: none;
+    justify-content: none !important;
+}
+.form-submit-reg{
+    color: #FFFFFF;
+    border: none;
+    background: none;
+}
+#br, #bl{
+    width: 50%;
+    height: 50px;
+    color: #000000;
+    font-size: 24px;
+}
+.active{
+    border-color: #f2f2f2;
+    background-color: #ef0000;
+    border-width: 3px !important;
+}
+.form-input:focus {
+  outline: none;
+  border-color: #d33333;
+  box-shadow: 0 0 5px rgba(211, 51, 51, 0.3);
+}

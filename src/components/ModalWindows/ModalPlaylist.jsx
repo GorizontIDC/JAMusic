@@ -1,6 +1,7 @@
-import '../../styles/playlists.css';
+import '../../styles/playlistsModal.css';
 import { AiOutlineClose } from "react-icons/ai";
 import { RiPlayLargeFill } from "react-icons/ri";
+import { AllSongTime } from "../../utils/logicalAudioPlayer.js";
 function ModalPlaylist({playlist, isOpen, onClose, onPlaySong}) {
     if (!isOpen || !playlist) return null; // это проверка на открытие окна
     return (
@@ -11,27 +12,34 @@ function ModalPlaylist({playlist, isOpen, onClose, onPlaySong}) {
             </button>
                 <div className='modal-head'>
                     <div className="modal-cover">
-                        <img src={playlist.cover} alt={playlist.title} />
+                        <img src={playlist.cover} alt={playlist.title} /> 
                     </div>
                     <div className="modal-info">
                         <h2 className='modal-title'>{playlist.title}</h2>
                         <p className='modal-description'>{playlist.description}</p>
-                        <p className='modal-count'>{playlist.songs.length} песен</p>
+                        <p className='modal-count'>Треков: {playlist.songs.length} • {AllSongTime(playlist.songs)}</p>
                     </div>
                 </div>
                 <div className='modal-songs'>
-                    <h3 className='modal-songs-title'> Треки </h3>
                     <div className='modal-songs-list'>
                         {playlist?.songs.map((song, index) => (
-                            <div key={song.id} className='modal-song-items'>
+                            <div key={song.id} className='modal-song-item'>
+                                 {/* Номер песни */}
                                 <div className='modal-song-number'>{index + 1}</div>
                                 <div className='modal-song-cover'>
+                                     {/* Картинка песни */}
                                     <img src={song.cover} alt={song.title} />
-                                        <button className='play-button' onClick={() => onPlaySong?.(song)}> <RiPlayLargeFill /> </button>
-                                    <h4 className='modal-song-title'>{song.title}</h4>
-                                    <p className='modal-song-artist'>{song.artist}</p>
+                                        <button className='play-button' onClick={() => onPlaySong?.(song)}>
+                                             <RiPlayLargeFill /> 
+                                        </button>
                                 </div>
-                            <div className='modal-song-items'>{song.duration}</div>
+                                     {/* Описание песни песни */}
+                                    <div className='modal-song-info'>
+                                            <h4 className='modal-song-title'>{song.title}</h4>
+                                            <p className='modal-song-artist'>{song.artist}</p>
+                                    </div>
+                                 {/* Длительность песни */}
+                                <div className="modal-song-duration">{song.duration}</div>
                         </div>
                     ))}
                     </div>

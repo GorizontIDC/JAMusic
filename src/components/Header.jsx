@@ -1,9 +1,8 @@
-import { useState } from "react";
 import  "../styles/compStyle.css";
 import { PersonCircle } from 'react-bootstrap-icons';
 import logo from '../assets/images/logo2.png';
-function Header({showSearch}) {
-    const [menuOpen, setMenuOpen] = useState(false);
+function Header({ onRLClick }) {
+    
     return (
         <header className="header">
             <>
@@ -14,7 +13,6 @@ function Header({showSearch}) {
                     />
                 </a>
             </>
-            {showSearch && (
             <div id="search" className="search w-500px d-flex align-items-center"> 
                 <input type="search"
                        className="form-control me-1 w-600px"
@@ -22,16 +20,11 @@ function Header({showSearch}) {
                 />
                 <button id="searchButton" className="btn btn-primary w-15px h-8px">Найти</button>
             </div>
-        )}
             <div className="userProfile">
-                <button className="profile-button" onClick={() => setMenuOpen(!menuOpen)}>
-                    <PersonCircle size={40}/>
+                {/**/ }
+                <button className="profile-button" onClick={onRLClick}>
+                    <PersonCircle size={38}/>
                 </button>
-                {menuOpen && (
-                    <div className="profileSection">
-
-                    </div>
-                )}
             </div>
         </header>
     )

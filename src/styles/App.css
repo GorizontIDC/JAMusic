@@ -5,5 +5,9 @@
     min-height: 100vh;
     background: linear-gradient(180deg, 
     #F2f2f2 35%,
-    #d94242 65% );
+    #d33333 65% );
+}
+ul {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
 }

@@ -39,7 +39,8 @@ function NewRelease({title, songs}){
                             </div>
                             <div className="song-info"> 
                                 <h3 className='song-title'>{song.title}</h3>
-                                <h4 className='songs-artist-album'>{song.artist} <RiAlbumFill /> {song.album}</h4>
+                                <h4 className='songs-artist-album'>{song.artist} </h4>
+                                <h4 className='songs-artist-album'><RiAlbumFill /> {song.album}</h4>
                                 <p className='song-duration'>{song.duration}</p>
                             </div>
                         </li>

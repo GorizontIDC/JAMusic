@@ -6,18 +6,26 @@ import ListeningNow from "../components/ListeningNow.jsx";
 import NewRelease from "../components/NewRelease.jsx";
 import PlaylistSection from "../components/PlaylistSection.jsx";
 import ModalPlaylist from "../components/ModalWindows/ModalPlaylist.jsx";
-import {logicalAudioPlayer} from "../hooks/logicalAudioPlayer.js";
-import "../styles/compStyle.css";
-import "../styles/playlists.css";
+import ModalRegLog from "../components/ModalWindows/ModalLogReg.jsx";
+import { useNavigate } from 'react-router-dom';
+import {logicalAudioPlayer} from "../utils/logicalAudioPlayer.js";
 import { newReleases, listeningNow} from "../data/songs.js";
 import { useState } from "react";
-import { playlist } from "../data/playlist.js";
+import { playlist } from "../data/Playlist.js";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function MainPage(){
   /*Хуки*/
   const [selectedPlaylist, setSelectedPlaylist] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { playSong } = logicalAudioPlayer();
+  const [isRegLogOpen, setIsRegLogOpen] = useState(false);
   /*Хуки*/
+  const navigate = useNavigate();
+  const handleLogin = () => {
+    console.log('Пользователь авторизован');
+    navigate('/profile');
+  }
   /*Обработка*/
   const handlePlaylistClick = (playlist) => {
     setSelectedPlaylist(playlist);
@@ -27,9 +35,12 @@ function MainPage(){
     setSelectedPlaylist(null);
     setIsModalOpen(false);
   }
+  const RLOpen = () => setIsRegLogOpen(true);
+  const RLclose = () => setIsRegLogOpen(false);
   return (
     <div id="allPage">
-      <Header showSearch={true} />
+      <Header
+        onRLClick={RLOpen}/>
       <main>
         <ImgCarousel />
         <ListeningNow title="Слушают сейчас!" songs={listeningNow} />
@@ -46,12 +57,15 @@ function MainPage(){
             onClose={handleCloseModal} 
             onPlaySong={playSong} 
           />
+          <ModalRegLog 
+            isOpen={isRegLogOpen}   
+            onClose={RLclose} 
+            onLogin={handleLogin}
+          />
         </>
-        <p>aaaa</p>
-        <p>aaaa</p>
-        <p>aaaa</p>
       </main>
       <Footer />
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 }

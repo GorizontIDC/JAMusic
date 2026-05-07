@@ -28,7 +28,7 @@ function Footer(){
                         target="_blank"
                         rel="noopener noreferrer"
                         className="social-link"
-                        aria-lable={social.name}
+                        aria-label={social.name}
                     >
                         <IconComponent size={47}/>
                     </a>
