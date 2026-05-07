@@ -32,7 +32,6 @@
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
-    "auto-rename-tag.activationOnLanguage": ["html", "xml", "php", "javascript"],
     "gh-pages": "^6.3.0",
     "globals": "^16.5.0",
     "typescript-eslint": "^8.48.0",
