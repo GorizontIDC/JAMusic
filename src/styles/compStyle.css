@@ -29,7 +29,7 @@ footer {
 .btn-primary {
   background-color: #0e1113 !important;
   color: #ffffff !important;
-  border-color: #ca1919 !important;
+  border-color: #ee0000 !important;
   border-width: 6px !important;
 }
 #ftbtn {
@@ -48,11 +48,16 @@ footer {
   border-color: #ff0000 !important;
   border-width: 3px !important;
   border-radius: 50% !important;
-  width: 60px;
-  height: 60px;
+  width: 62px;
+  height: 62px;
+}
+.PersonalCircle{
+  position: absolute;
+  top: 19.5px;
+  right: 55.6px;
 }
 .social-link {
-  color: #d33333 !important;
+  color: #ee0000 !important;
 }
 .social-links {
   display: flex;

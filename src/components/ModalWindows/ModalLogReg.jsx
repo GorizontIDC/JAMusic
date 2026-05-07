@@ -54,6 +54,7 @@ function ModalRegLog({isOpen, onClose, onLogin}) {
             }
         }
           //регистрация
+          
     return(
         <div className="lr-Window" onClick={onClose}>
             <div className="RL-content" onClick = {(e) => e.stopPropagation()}>
@@ -63,11 +64,11 @@ function ModalRegLog({isOpen, onClose, onLogin}) {
                <div className="auth-header">
                     <button 
                         id="bl"
-                        className={isLogin ? "active" : ""} 
+                        className={isLogin ? "activeLR" : ""} //кнопка логина
                         onClick={() => setIsLogin(true)}> Вход </button>
                     <button 
                         id="br"
-                        className={!isLogin ? "active" : ""} 
+                        className={!isLogin ? "activeLR" : ""} //кнопка регистрации
                         onClick={() => setIsLogin(false)}> Регистрация </button>
                 </div> 
                 <div className='content-inside'>

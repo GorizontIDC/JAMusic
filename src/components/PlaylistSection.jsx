@@ -46,7 +46,7 @@ function PlaylistSection({title, playlists = [], onPlaylistClick}){
                 ))}
             </ul>
         </div>
-            
+        
     );
 }
 export default PlaylistSection;

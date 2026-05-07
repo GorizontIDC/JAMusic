@@ -1,0 +1,25 @@
+.page-acc{
+     
+}
+.main-acc{
+    
+}
+.footer-acc{
+   
+}
+.loading-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.loading{
+    color: black;
+    font-size: 36px;
+}
+.gif{
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+}
