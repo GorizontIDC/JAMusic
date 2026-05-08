@@ -5,11 +5,11 @@ import {
 } from 'react-icons/fa';
 function Footer(){
     const currentYear = new Date().getFullYear();
-    const socialcontact = [
+    const social = [
         {icon: FaVk, url: 'https://vk.com/mygorizontsobitiy', name: 'VK'},
-        {icon: FaTelegram, url: '#', name: 'Telegram'},
-        {icon: FaGithub, url: '#', name: 'Github'},
-        {icon: FaReddit, url: '#', name: 'Reddit'}
+        {icon: FaTelegram, url: 'https://t.me/itsworth_its', name: 'Telegram'},
+        {icon: FaGithub, url: 'https://github.com/GorizontIDC', name: 'Github'},
+        {icon: FaReddit, url: 'https://www.reddit.com/user/Ok-Ant9128/', name: 'Reddit'}
     ]
     return (
         
@@ -19,7 +19,7 @@ function Footer(){
                 Музыка принадлежит правообладателям.
             </p>
             <div className="social-links">
-                {socialcontact.map((social ,index) =>{
+                {social.map((social ,index) =>{
                     const IconComponent = social.icon;
                     return(
                     <a
@@ -34,6 +34,9 @@ function Footer(){
                     </a>
                     )
                 })}
+            </div>
+            <div className="">
+
             </div>
             <button className="btn btn-primary" id="ftbtn">
                 Обратная связь

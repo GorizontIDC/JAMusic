@@ -1,4 +1,5 @@
 //import React from "react";
+{/*@vite-ignore*/}
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 import ImgCarousel from "../components/Carousel.jsx";
