@@ -11,6 +11,7 @@ function Footer(){
         {icon: FaGithub, url: 'https://github.com/GorizontIDC', name: 'Github'},
         {icon: FaReddit, url: 'https://www.reddit.com/user/Ok-Ant9128/', name: 'Reddit'}
     ]
+    console.log('Footer загрузился!');
     return (
         
         <footer className="footer"> 
