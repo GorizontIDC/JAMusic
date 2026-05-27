@@ -1,8 +1,32 @@
 import '../../styles/playlistsModal.css';
+import "../../styles/forEverySingle.css";
+import '../../styles/compStyle.css'
 import { AiOutlineClose } from "react-icons/ai";
 import { RiPlayLargeFill } from "react-icons/ri";
 import { AllSongTime } from "../../utils/logicalAudioPlayer.js";
+import { FaHeartCirclePlus } from "react-icons/fa6";
+import { useRef, useState, useEffect } from 'react';
 function ModalPlaylist({playlist, isOpen, onClose, onPlaySong}) {
+    const titleRefs = useRef({});
+    const playlists = playlist?.songs || [];
+    //проверка на то что текст длиньше карточки
+    const [Distance, setDistance] = useState({})
+    useEffect(()=>{
+        const distanceScroll = {};
+        playlists.forEach(song => {
+            const textEl = titleRefs.current[song.id];
+            const contEl = textEl?.parentElement;
+                if (textEl && contEl) {
+                    const overWidth = textEl.scrollWidth - contEl.clientWidth;
+                    if (overWidth > 0){
+                        distanceScroll[song.id] = -overWidth;
+                    }else{
+                        distanceScroll[song.id] = 0;
+                    }
+                };
+        });
+        setDistance(distanceScroll);
+    }, [playlist]);
     if (!isOpen || !playlist) return null; // это проверка на открытие окна
     return (
         <div className='modal-window' onClick={onClose}>
@@ -23,24 +47,29 @@ function ModalPlaylist({playlist, isOpen, onClose, onPlaySong}) {
                 <div className='modal-songs'>
                     <div className='modal-songs-list'>
                         {playlist?.songs.map((song, index) => (
-                            <div key={song.id} className='modal-song-item'>
-                                 {/* Номер песни */}
+                            <div key={song.id} className='single-song-card'>
                                 <div className='modal-song-number'>{index + 1}</div>
-                                <div className='modal-song-cover'>
-                                     {/* Картинка песни */}
-                                    <img src={song.cover} alt={song.title} />
-                                        <button className='play-button' onClick={() => onPlaySong?.(song)}>
-                                             <RiPlayLargeFill /> 
+                                <div className='single-song-cover'> 
+                                    <img className='single-song-img' src={song.cover} alt={song.title}></img>
+                                        <button className='single-song-playButton' onClick={()=> onPlaySong?.(song)}>
+                                            <RiPlayLargeFill />
                                         </button>
                                 </div>
-                                     {/* Описание песни песни */}
-                                    <div className='modal-song-info'>
-                                            <h4 className='modal-song-title'>{song.title}</h4>
-                                            <p className='modal-song-artist'>{song.artist}</p>
-                                    </div>
-                                 {/* Длительность песни */}
-                                <div className="modal-song-duration">{song.duration}</div>
-                        </div>
+                                <div className='single-song-info'>
+                                    <h4 ref={text => titleRefs.current[song.id] = text} 
+                                        className={`single-song-title ${Distance[song.id] ? 'overflow' : ''}`}
+                                        style={Distance[song.id] ? { '--scroll-x': `${Distance[song.id]}px`} : {}}>
+                                            {song.title}
+                                    </h4>
+                                    <p className='single-artist'>{song.artist}</p>
+                                </div>
+                                <div className='single-function'> 
+                                    <button className='single-onFavorite' /*onClick={}*/>
+                                        <FaHeartCirclePlus />
+                                    </button>
+                                    <h3 className='single-song-duration'>{song.duration}</h3>
+                                </div>
+                            </div>
                     ))}
                     </div>
                 </div>

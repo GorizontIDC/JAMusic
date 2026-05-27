@@ -1,8 +1,12 @@
 .page-acc{
-     
-}
-.main-acc{
     
+}
+.main-acc {
+    margin-left: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
 }
 .footer-acc{
    
@@ -22,4 +26,173 @@
     align-items: center;
     width: 42px;
     height: 42px;
+}
+.logout-button{
+    position: fixed;
+    top: 32.5px;
+    right: 140px;
+    color: #FFFFFF;
+    background: none !important;
+    border-color: #ee0000;
+    border-width: 4px;
+}
+.back-button{
+    color: #FFFFFF;
+    font-size: 18px;
+    background:black !important;
+    border-color: #ee0000;
+    border-width: 4px;
+    border-radius: 5%;
+    height: 40px !important;
+    width: 80px !important;
+    position: relative;
+    left: 5px;
+    top: 5px;
+}
+.profile-picture{
+    background-color: cyan;
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #ee0000
+}
+.user-hello {
+    grid-row: span 3 / span 3;
+    margin-top: 10px;
+    font-size: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 310px;
+}
+.user-hello-title{
+    font-weight: 700;
+}
+.fav-tracks {
+    grid-column: span 2 / span 2;
+}
+/* Кнопка избранного */
+.favorite-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    color: #888;
+    transition: all 0.2s;
+}
+
+.favorite-btn.active {
+    color: #ff4d4d;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Список избранных треков */
+.favorite-tracks {
+    margin: 30px 0;
+}
+
+.favorite-tracks h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.favorites-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.favorite-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    transition: background 0.2s;
+}
+
+.favorite-item:hover {
+    background: #e9ecef;
+}
+
+.favorite-cover {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.favorite-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.favorite-cover button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.7);
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.favorite-cover:hover button {
+    opacity: 1;
+}
+
+.favorite-info {
+    flex: 1;
+}
+
+.favorite-info h4 {
+    font-size: 16px;
+    margin: 0 0 4px 0;
+}
+
+.favorite-info p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.favorite-duration {
+    width: 50px;
+    text-align: right;
+    color: #888;
+    font-size: 14px;
+}
+.tracks-title .albims-title .playlists-title{
+    font-weight: 700;
+}
+.fav-albims {
+    grid-column: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.fav-playlists {
+    grid-column: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 3;
 }

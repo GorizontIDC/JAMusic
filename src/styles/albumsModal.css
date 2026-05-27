@@ -20,7 +20,6 @@
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
 }
 .modal-content{
     background-color: white !important;
@@ -73,7 +72,7 @@
   margin: 0 0 8px 0;
   font-size: 24px;
 }
-.modal-description {
+.modal-author {
   color: #2d2d2d;
   margin-bottom: 8px;
 }
@@ -90,7 +89,7 @@
 }
 .modal-song-artist {
     font-size: 14px;
-    color: #3c3c3c;
+    color: #666;
     margin: 0;
     white-space: nowrap;
     overflow: hidden;
@@ -142,7 +141,7 @@
   font-size: 14px solid;
   flex-shrink: 0;
 }
-.playlist-button {
+.album-button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -160,10 +159,10 @@
   transition: opacity 0.2s;
 }
 /**/
-.playlist-Section{
-  padding: 0px 50px 50px 50px !important;
+.album-Section{
+  padding: 0px 50px 0px 50px !important;
 }
-.playlist-SectionTitle{
+.album-SectionTitle{
   align-items: center;
   justify-content: center;
   display: flex;
@@ -172,7 +171,7 @@
   border-radius: 16px;
   font-weight: 500;
 }
-.playlist-container {
+.album-container {
   display: flex;
   gap: 1rem;
   list-style: none;
@@ -184,7 +183,7 @@
   -ms-overflow-style: none;
   max-width: 100%;
 }
-.playlist-card-cover{
+.album-card-cover{
   width: 100%;
   height: 220px;
   border-radius: 0% 0% 0% 0%;
@@ -195,13 +194,13 @@
   cursor: pointer;
   position: relative;
 }
-.playlist-card-title{
+.album-card-title{
   margin-left: 5px;
 }
-.playlist-card-count{
+.album-card-count{
   margin-left: 5px;
 }
-.playlist-card-cover img{
+.album-card-cover img{
   width: 100%;
   height: 100%;
   transition: filter 0.35s, transform 0.15s;
@@ -209,19 +208,21 @@
   object-fit: cover;
   margin-bottom: 10px;
 }
-.playlist-card-cover:hover img{
+.album-card-cover:hover img{
   filter: brightness(0.65);
   transform: scale(1.03);
 }
-.playlist-vievCard{
+.album-vievCard{
  flex-shrink: 0;
  width: 220px;
  overflow: hidden;
  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.35);
  background-color: #FFFFFF;
- border-radius: 0% 0% 0% 0%;
+ border-width: 10px;
+ border-color: #000000;
 }
-.scroll-button-left:hover,.scroll-button-right:hover {
+.scroll-button-left:hover,
+.scroll-button-right:hover {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -234,7 +235,7 @@
   justify-content: center;
   transition: background 0.2s;
 }
-.playlist-controls {
+.album-controls {
   display: flex;
   justify-content: end;
   align-items: center;
@@ -242,9 +243,9 @@
   width: 100%;
   padding-right: 2rem;
 }
-.playlist-card-cover:hover .playlist-button{
+.album-card-cover:hover .album-button{
   opacity: 1;
 }
-.playlist-container::-webkit-scrollbar {
+.album-container::-webkit-scrollbar {
   display: none; 
 }

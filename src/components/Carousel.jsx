@@ -21,7 +21,7 @@ function ImgCarousel(){
         {
             id:3,
             image: slide3,
-            title: 'Будь с нами,',
+            title: 'Будь с нами',
             description: 'Тебе по вкусу!'
         }
        ]

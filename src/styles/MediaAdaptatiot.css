@@ -1,0 +1,40 @@
+/* Хедер */
+@media (max-width: 768px){
+    #search {
+        width: 1px !important;
+        align-items: start !important;
+        margin-right: 250px !important;
+    }
+    .header{
+        padding: 0 0 0 0;
+    }
+    .logo-images {
+        width: 90px !important;
+        height: 50px !important;
+        margin-left: 5px !important;
+        padding-left: 5px !important;
+    }
+    #searchButton{
+        width: 70px !important;
+    }
+    .profile-button{
+        margin-right: 0px !important;
+    }
+}
+/* Хедер */
+/* блок Слушают сейчас */
+@media (max-width: 768px) {
+    .listen-column {
+        width: 280px;
+    }
+
+    .listen-song-card {
+        padding: 8px;
+    }
+
+    .listen-song-cover {
+        width: 48px;
+        height: 48px;
+    }
+}
+/* блок Слушают сейчас */

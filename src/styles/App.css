@@ -1,13 +1,20 @@
 *{
-    font-family: "Pangolin";
+    font-family: "Oswald";
 }
+
 #root{
-    min-height: 100vh;
+    min-height: 111.11vh;
     background: linear-gradient(180deg, 
     #F2f2f2 35%,
-    #ee0000 65% );
+    #dc0000 65% );
+    zoom: 0.9;
 }
 ul {
   padding-left: 1.5rem !important;
   padding-right: 1.5rem !important;
+}
+.scroll-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

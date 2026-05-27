@@ -11,7 +11,6 @@ function Footer(){
         {icon: FaGithub, url: 'https://github.com/GorizontIDC', name: 'Github'},
         {icon: FaReddit, url: 'https://www.reddit.com/user/Ok-Ant9128/', name: 'Reddit'}
     ]
-    console.log('Footer загрузился!');
     return (
         
         <footer className="footer"> 
@@ -36,8 +35,13 @@ function Footer(){
                     )
                 })}
             </div>
-            <div className="">
-
+            <div className="contact-footer">
+                <a href="mailto:jamusic@list.ru" className="link-footer">
+                    jamusic@list.ru
+                </a>
+                <a href="tel:+79515747309" className="link-footer">
+                    +7 951-574-7309
+                </a>
             </div>
             <button className="btn btn-primary" id="ftbtn">
                 Обратная связь

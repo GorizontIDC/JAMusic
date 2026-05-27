@@ -6,9 +6,14 @@ header {
   background-color: #0e1113;
 }
 .logo-images {
-  width: 160px;
-  height: 80px;
+  width: 220px;
+  height: 70px;
   margin-left: 30px;
+}
+.searchBar{
+  width:500px;
+  display:flex;
+  align-items:center;
 }
 .userProfile {
   margin-right: 1.5rem;
@@ -16,6 +21,7 @@ header {
 .textFooter {
   color: #ffffff;
   margin-bottom: 0% !important;
+  margin-left: 1.5rem;
 }
 footer {
   height: 100px;
@@ -29,7 +35,7 @@ footer {
 .btn-primary {
   background-color: #0e1113 !important;
   color: #ffffff !important;
-  border-color: #ee0000 !important;
+  border-color: #dc0000 !important;
   border-width: 6px !important;
 }
 #ftbtn {
@@ -43,6 +49,7 @@ footer {
   border-color: #ff0000 !important;
   border-width: 3px !important;
   width: 300px !important;
+  justify-content: center !important;
 }
 .profile-button {
   border-color: #ff0000 !important;
@@ -53,15 +60,16 @@ footer {
 }
 .PersonalCircle{
   position: absolute;
-  top: 19.5px;
+  top: 16px;
   right: 55.6px;
 }
 .social-link {
-  color: #ee0000 !important;
+  color: #dc0000 !important;
 }
 .social-links {
   display: flex;
   gap: 0.5rem;
+  
 }
 /*Блок для карусели*/
 .carousel-container {
@@ -73,118 +81,157 @@ footer {
   font-size: 20px;
 }
 /*Блок для карусели*/
-/*Блок для Слушают сейчас и Новые релизы*/
-.song-list-container {
-  padding: 0px 50px 0px 50px;
+/*Блок для Слушают сейчас*/
+/* Секция */
+.listen-section {
+    padding: 0px 50px 50px 50px !important;
 }
-.scroll-list-title {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  font-size: 46px;
-  color: #181a1d;
-}
-.song-wrapper {
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  display: flex;
-  gap: 1rem;
-}
-.songUl {
-  display: flex;
-  gap: 0.8rem;
-  list-style: none;
-  width: max-content;
-  margin-top: 5px;
-  padding-bottom: 30px;
-}
-.song-item {
-  flex-shrink: 0;
-  width: 190px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.35);
-  background-color: #ffffff;
-  border-radius: 5% 5% 0% 0%;
+.listen-title {
+    font-size: 46px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .song-list-controls {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  gap: 5px;
-  width: 100%;
-  padding-right: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 15px;
 }
-.scroll-button-left,
-.scroll-button-right {
-  border-radius: 50%;
-  width: 39px;
-  height: 40px;
-  color: #ca1919;
-  border-color: #ca1919;
-  border-width: 3px;
+.scroll-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ca1919;
+    background: white;
+    color: #ca1919;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
 }
-.song-wrapper::-webkit-scrollbar {
-  display: none; /*Скрктие скроллера */
+.scroll-button:hover {
+    background: #ca1919;
+    color: white;
 }
-.song-wrapper {
-  scrollbar-width: none;
+.listen-grid {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 15px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;  
 }
-.song-cover {
-  width: 100%;
-  height: 190px;
-  border-radius: 5% 5% 0% 0%;
-  overflow: hidden;
-  font-size: 20px;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
+.single-column {
+    flex-shrink: 0;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
-.song-cover img {
-  width: 100%;
-  height: 100%;
-  transition:
-    filter 0.3s,
-    transform 0.3s;
-  margin-bottom: -55px;
-  grid-area: 1/1;
-  object-fit: cover;
-  margin-bottom: 10px;
+/*карточка песни */
+.single-song-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    transition: background 0.2s;
+    cursor: pointer;
 }
-.song-cover:hover img {
-  filter: brightness(0.65);
-  transform: scale(1.03);
+.single-song-card:hover {
+    background: #efe9e9;
 }
-.play-button {
-  display: flex;
-  align-items: center;
+/*Блок для Слушают сейчас и Новые релизы*/
+/*Футер*/
+.footer{
+  height: 100px !important;
+}
+.link-footer{
+  color:#ffffff;
+  font-weight:300;
   justify-content: center;
-  transform: translateY(-30px);
-  width: 55px;
-  height: 55px;
-  grid-area: 1/1;
-  cursor: pointer;
-  z-index: 2;
-  transition: all 0.3s;
-  background: none;
-  color: #ffffff;
-  border: none;
-  border-radius: 50%;
-  opacity: 0;
-  margin-top: 50px;
+  text-decoration: none;
+  transition: opacity 0.5s;
+  font-weight: bold;
 }
-.song-cover:hover .play-button {
-  opacity: 1;
+.contact-footer{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 50px;
+  font-weight: bold;
 }
-.song-info * {
-  margin-bottom: 0px;
-  margin-left: 5px;
+.link-footer:hover {
+  opacity: 0.8;
+  text-decoration: underline;
 }
-.songs-artist-album {
-  font-size: 15px;
-  color: #383838;
+
+
+
+
+/* Контейнер для поиска с результатами */
+.search-container {
+    position: relative;
+    flex: 1;
+    max-width: 500px;
 }
-.song-duration {
-  font-size: 20px;
-  color: #383838;
+
+/* Выпадающий список результатов */
+.search-results-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    z-index: 1000;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 5px;
 }
-/*Блок для Слушают сейчас */
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+}
+
+.search-result-item:hover {
+    background: #f5f5f5;
+}
+
+.search-result-item img {
+    width: 48px;
+    height: 48px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.result-info {
+    flex: 1;
+}
+
+.result-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.result-artist {
+    font-size: 12px;
+    color: #666;
+}
+
+.result-preview {
+    height: 36px;
+    width: 120px;
+}

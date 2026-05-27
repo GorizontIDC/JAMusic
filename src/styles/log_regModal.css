@@ -15,16 +15,17 @@
     background-color: white !important;
     width: 100%;
     width: 400px;
-    height: 32vh;
+    height: auto;
+    min-height: 400px;
     position: relative;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     z-index: 10000;
 }
 .content-inside{
     display: flex;
     text-align: center;
     justify-content: center;
-    height: 80%;
+    min-height: 400px;
 }
 .modal-closed{
     position: absolute;
@@ -48,9 +49,24 @@
 .registr-form{
     display: flex;
 }
-.inputs-reg{
-    align-items: center;
-    vertical-align: auto !important;
+.inputs-login .inputs-reg input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin: 20px 0;
+}
+.inputs-login input{
+    margin-bottom: 10p;
+}
+.inputs-reg input{
+    margin-bottom: 10px;
+}
+.err-text{
+    color:#000000;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: -5px;
+    display: block;
 }
 .form-submit{
     border: none;
@@ -72,7 +88,7 @@
     background: linear-gradient(215deg, 
     #F2f2f2 35%,
     #ee0000 65% );
-
+    width: 100%;
 }
 .registr-form{
     display: flex;
@@ -87,7 +103,7 @@
     color: #FF0000;
     border: none;
     background: none;
-    justify-content: none !important;
+    justify-content: none;
 }
 .form-submit-reg{
     color: #FFFFFF;
@@ -104,7 +120,9 @@
     border-color: #f2f2f2;
     background-color: #ee0000;
     border-width: 3px !important;
-    color:#000000 solid;
+    color:#000000;
+    font-weight: 500;
+    border-bottom: none;
 }
 .form-input:focus {
   outline: none;
